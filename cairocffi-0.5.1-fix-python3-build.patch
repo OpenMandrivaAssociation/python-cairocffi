@@ -1,0 +1,23 @@
+diff --git a/setup.py b/setup.py
+index f659e17..9cb6fdb 100644
+--- a/setup.py
++++ b/setup.py
+@@ -1,14 +1,12 @@
+ from setuptools import setup, find_packages
+ from os import path
+ import re
++import io
+ 
+-
+-VERSION = re.search("VERSION = '([^']+)'", open(
++VERSION = re.search("VERSION = '([^']+)'", io.open(
+     path.join(path.dirname(__file__), 'cairocffi', '__init__.py')
+-).read().strip()).group(1)
+-
+-LONG_DESCRIPTION = open(path.join(path.dirname(__file__), 'README.rst')).read()
+-
++, encoding='utf-8').read().strip()).group(1)
++LONG_DESCRIPTION = io.open(path.join(path.dirname(__file__), 'README.rst'), encoding='utf-8').read()
+ 
+ setup(
+     name='cairocffi',
