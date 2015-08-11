@@ -1,7 +1,7 @@
 %global pypi_name cairocffi
 %global pypi_oname cairocffi
 
-%define python3 1
+%define python3 0
 
 Name:           python-%{pypi_name}
 Version:        0.5.1
