@@ -32,6 +32,7 @@ Group:          Development/Python
 
 BuildRequires:  pkgconfig(python2)
 BuildRequires:  python2-setuptools
+BuildRequires:  python2-cffi
 
 %description -n python2-%{pypi_name}
 cffi-based cairo bindings for Python
