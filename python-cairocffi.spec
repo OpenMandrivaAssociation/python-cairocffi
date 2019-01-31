@@ -18,6 +18,7 @@ BuildArch:      noarch
  
 BuildRequires:  pkgconfig(python)
 BuildRequires:  python-setuptools
+BuildRequires:  python-cffi
 
 %rename python3-%{pypi_name}
 
