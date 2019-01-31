@@ -4,15 +4,15 @@
 %define python2 1
 
 Name:           python-%{pypi_name}
-Version:        0.5.1
-Release:        2
+Version:        0.9.0
+Release:        1
 Group:          Development/Python
 Summary:        cffi-based cairo bindings for Python
 
 License:        MIT
 URL:            http://pypi.python.org/pypi/%{pypi_name}
 Source0:        http://pypi.python.org/packages/source/c/%{pypi_oname}/%{pypi_oname}-%{version}.tar.gz
-Patch0:         cairocffi-0.5.1-fix-python3-build.patch
+#Patch0:         cairocffi-0.5.1-fix-python3-build.patch
 
 BuildArch:      noarch
  
