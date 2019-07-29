@@ -1,8 +1,6 @@
 %global pypi_name cairocffi
 %global pypi_oname cairocffi
 
-%define __requires_exclude ^python???dist(setuptools)$
-
 Name:		python-%{pypi_name}
 Version:	1.0.2
 Release:	2
@@ -33,10 +31,10 @@ cffi-based cairo bindings for Python.
 rm -rf %{pypi_name}.egg-info
 
 %build
-%py3_build
+%{__python} setup.py build
 
 %install
-%py3_build
+%{__python} setup.py install -O1 --skip-build --root %{buildroot}
 
 %files
 %{python_sitelib}/%{pypi_name}*
