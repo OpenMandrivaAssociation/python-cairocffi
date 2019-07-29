@@ -29,6 +29,9 @@ cffi-based cairo bindings for Python.
 %prep
 %autosetup -n %{pypi_oname}-%{version} -p1
 
+# Remove bundled egg-info
+rm -rf %{pypi_name}.egg-info
+
 %build
 %py3_build
 
