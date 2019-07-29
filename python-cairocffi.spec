@@ -1,6 +1,8 @@
 %global pypi_name cairocffi
 %global pypi_oname cairocffi
 
+%define __requires_exclude ^python???dist(setuptools)$
+
 Name:		python-%{pypi_name}
 Version:	1.0.2
 Release:	2
@@ -12,11 +14,13 @@ Source0:	https://files.pythonhosted.org/packages/0f/0f/7e21b5ddd31b610e46a879c0d
 #Patch0:         cairocffi-0.5.1-fix-python3-build.patch
 BuildArch:	noarch
 BuildRequires:	pkgconfig(python)
-BuildRequires:	python-setuptools
-BuildRequires:	python-cffi
+BuildRequires:	python3dist(setuptools)
+BuildRequires:	python3dist(cffi)
 BuildRequires:	pkgconfig(libffi)
 BuildRequires:	pkgconfig(gdk-pixbuf-2.0)
+BuildRequires:	pkgconfig(cairo)
 Requires:	cairo
+Requires:	python3dist(cffi)
 %rename python3-%{pypi_name}
 
 %description
@@ -26,10 +30,10 @@ cffi-based cairo bindings for Python.
 %autosetup -n %{pypi_oname}-%{version} -p1
 
 %build
-%{__python} setup.py build
+%py3_build
 
 %install
-%{__python} setup.py install -O1 --skip-build --root %{buildroot}
+%py3_build
 
 %files
 %{python_sitelib}/%{pypi_name}*
