@@ -19,7 +19,7 @@ BuildRequires:	python3dist(cffi)
 BuildRequires:	pkgconfig(libffi)
 BuildRequires:	pkgconfig(gdk-pixbuf-2.0)
 BuildRequires:	pkgconfig(cairo)
-Requires:	cairo
+Requires:	%{_lib}cairo2
 Requires:	python3dist(cffi)
 %rename python3-%{pypi_name}
 
