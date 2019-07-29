@@ -15,6 +15,7 @@ BuildRequires:	pkgconfig(python)
 BuildRequires:	python-setuptools
 BuildRequires:	python-cffi
 BuildRequires:	pkgconfig(libffi)
+BuildRequires:	pkgconfig(gdk-pixbuf-2.0)
 Requires:	cairo
 %rename python3-%{pypi_name}
 
