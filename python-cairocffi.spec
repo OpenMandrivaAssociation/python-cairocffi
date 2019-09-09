@@ -2,13 +2,13 @@
 %global pypi_oname cairocffi
 
 Name:		python-%{pypi_name}
-Version:	1.0.2
-Release:	2
+Version:	1.1.0
+Release:	1
 Group:		Development/Python
 Summary:	cffi-based cairo bindings for Python
 License:	MIT
 URL:		http://pypi.python.org/pypi/%{pypi_name}
-Source0:	https://files.pythonhosted.org/packages/0f/0f/7e21b5ddd31b610e46a879c0d21e222dd0fef428c1fc86bbd2bd57fed8a7/cairocffi-1.0.2.tar.gz
+Source0:	https://files.pythonhosted.org/packages/f7/99/b3a2c6393563ccbe081ffcceb359ec27a6227792c5169604c1bd8128031a/cairocffi-1.1.0.tar.gz
 #Patch0:         cairocffi-0.5.1-fix-python3-build.patch
 BuildArch:	noarch
 BuildRequires:	pkgconfig(python)
