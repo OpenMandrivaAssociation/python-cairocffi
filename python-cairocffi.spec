@@ -17,6 +17,7 @@ BuildRequires:	python3dist(cffi)
 BuildRequires:	pkgconfig(libffi)
 BuildRequires:	pkgconfig(gdk-pixbuf-2.0)
 BuildRequires:	pkgconfig(cairo)
+BuildRequires:	python3dist(pip)
 Requires:	%{_lib}cairo2
 Requires:	python3dist(cffi)
 %rename python3-%{pypi_name}
@@ -31,10 +32,10 @@ cffi-based cairo bindings for Python.
 rm -rf %{pypi_name}.egg-info
 
 %build
-%{__python} setup.py build
+python setup.py build
 
 %install
-%{__python} setup.py install -O1 --skip-build --root %{buildroot}
+python setup.py install -O1 --skip-build --root %{buildroot}
 
 %files
 %{python_sitelib}/%{pypi_name}*
