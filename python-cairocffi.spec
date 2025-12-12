@@ -3,7 +3,7 @@
 
 Name:		python-%{pypi_name}
 Version:	1.7.1
-Release:	1
+Release:	2
 Group:		Development/Python
 Summary:	cffi-based cairo bindings for Python
 License:	MIT
